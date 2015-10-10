@@ -1,0 +1,98 @@
+<html lang="zh-CN" style="overflow:hidden;height: 500px;">
+<head>
+    <meta charset="UTF-8"/>
+    <title>JIRA TOAST</title>
+    <link rel="stylesheet" href="style/css.css">
+</head>
+<body class="popup_body" style="overflow:hidden">
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="javascript:;">All Issues</a>
+        </li>
+    </ul>
+
+    <a class="pull-right icon-base"
+       href="options.html"
+       style="position: absolute;top: 22px;right: 10px; text-decoration: none;"
+       target="_blank"> 插件设置</a>
+
+    <div class="tab-content">
+        <!--<div class="tab-pane notify active activeIn">-->
+            <!--<div class="notify_detail">-->
+                <!--<div class="row-fluid">-->
+                    <!--<h4>-->
+                        <!--<img src="img/icon48.png">-->
+                        <!--<a href="http://www.smzdm.com/p/705093?&amp;utm_source=browser&amp;utm_medium=chrome&amp;utm_campaign=push">-->
+                            <!--SMYH-12：丝巾定制间，加入购物车后弹出框位置及链接问题-->
+                        <!--</a>-->
+                    <!--</h4>-->
+                <!--</div>-->
+                <!--<div class="row-fluid">-->
+                    <!--<h4>-->
+                        <!--<img src="img/icon48.png">-->
+                        <!--<a href="http://www.smzdm.com/p/705093?&amp;utm_source=browser&amp;utm_medium=chrome&amp;utm_campaign=push">-->
+                            <!--SMYH-12：花型数据量比较大， 不断下拉， 个别花型重叠显示-->
+                        <!--</a>-->
+                    <!--</h4>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<!-- 登录弹窗 -->
+<div class="modal loginRange" ms-controller="loginRange" ms-class-in="isShow">
+    <div class="modal-header">
+        <a class="close" ms-on-click='hide()'>×</a>
+    </div>
+    <form method="post" novalidate="novalidate" class="form-horizontal">
+
+        <div class="control-group">
+            <label class="control-label">用户名</label>
+
+            <div class="controls">
+                <input ms-duplex="info.username" ms-on-keydown="inputSub($event)" type="text" placeholder="请输入您的用户名"
+                       class="required" tabindex="1"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">密码</label>
+
+            <div class="controls">
+                <input ms-duplex="info.password" ms-on-keydown="inputSub($event)" type="password" placeholder="请输入您的密码"
+                       class="required" tabindex="2"/>
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <label class="control-label"></label>
+
+            <div class="controls">
+                <input type="checkbox" ms-on-click="changeSave()" class="savelogin" ms-attr-checked="info.isSave"/>
+                <span class="savelogin_span">两周内自动登录</span>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary submit" ms-on-click="submit()">确认登录</button>
+
+    </form>
+</div>
+<!-- /登录弹窗 -->
+
+<!-- 提示弹窗 -->
+<div class="modal alert" ms-controller="alertRange" ms-class-in="active">
+    <div class="modal-header">
+        <a ms-on-click="hide()" class="close">×</a>
+
+        <h3>小提示！</h3>
+    </div>
+    <div class="modal-body">{{ message }}</div>
+</div>
+<!-- /提示弹窗 -->
+
+</body>
+
+<!--<script src="js/app.js"></script>-->
+</html>
