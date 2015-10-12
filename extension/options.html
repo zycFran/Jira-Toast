@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>插件配置</title>
+    <link rel="stylesheet" href="style/css.css" />
+</head>
+<body class="options_body">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <!-- 导航区 -->
+        <div class="container">
+            <a class="brand" href="#">JIRA ISSUE 实时推送</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="#">设置</a>
+                    </li>
+                    <li>
+                        <a href="#">关于本插件</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /导航区 -->
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <section class="basic">
+        <div class="page-header">
+            <h2>JIRA用户名设置</h2>
+        </div>
+        <hr />
+        <input class="row-fluid" placeholder="请输入jira用户名" id="user_name">
+
+        <div class="span4 list">
+            <h4>Jira 用户角色</h4>
+            <p></p>
+            <div class="row-fluid">
+                <div class="btn-group span12" data-toggle="buttons-radio" data-default="100" data-toggle-name="open_back" id="open_back">
+                    <button class="btn btn-primary">管理员</button>
+                    <button class="btn btn-primary active">开发</button>
+                    <button class="btn btn-primary">测试</button>
+                </div>
+            </div>
+        </div>
+
+        <button>保存</button>
+    </section>
+</div>
+</body>
+<script src="libs/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+</html>

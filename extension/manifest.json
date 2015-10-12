@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "JIRA-TOAST",
+  "description": "Jira issue 实时提醒.",
+  "version": "1.0",
+  "icons": {
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "notifications",
+    "https://*/",
+    "http://*/"
+  ]
+}

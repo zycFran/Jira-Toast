@@ -1,4 +1,5 @@
 //var http = require('http');
+//<meta charset="utf-8"/>
 
 //socket.io setup
 var io = require('socket.io').listen(3001);
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
 router.post('/jira/webhook', function (req, res) {
+  console.log(req.body.issue.fields.summary);
   io.sockets.emit('ping',req.body);
 });
 app.use("/", router);
