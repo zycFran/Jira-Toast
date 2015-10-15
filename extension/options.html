@@ -29,24 +29,47 @@
 <div class="container">
     <section class="basic">
         <div class="page-header">
-            <h2>JIRA用户名设置</h2>
+            <h2>设置</h2>
         </div>
-        <hr />
-        <input class="row-fluid" placeholder="请输入jira用户名" id="user_name">
+
+        <div class="span4 list">
+            <h4>Jira 用户名</h4>
+            <p></p>
+            <input class="row-fluid" placeholder="请输入jira用户名" id="user_name">
+        </div>
 
         <div class="span4 list">
             <h4>Jira 用户角色</h4>
             <p></p>
             <div class="row-fluid">
                 <div class="btn-group span12" data-toggle="buttons-radio" data-default="100" data-toggle-name="open_back" id="open_back">
-                    <button class="btn btn-primary">管理员</button>
-                    <button class="btn btn-primary active">开发</button>
-                    <button class="btn btn-primary">测试</button>
+                    <button class="btn btn-primary role-item role-admin" value="admin">管理员</button>
+                    <button class="btn btn-primary role-item active  role-developer" value="developer">开发</button>
+                    <button class="btn btn-primary role-item  role-tester" value="tester">测试</button>
                 </div>
             </div>
         </div>
 
-        <button>保存</button>
+        <div class="span4 list" style="margin-top: 15px;">
+            <h4>自动关闭桌面提醒</h4>
+            <p></p>
+            <div class="row-fluid" id="onoffswitch">
+                <div class="onoffswitch">
+                    <input type="checkbox" class="onoffswitch-checkbox" id="noti_desktop">
+                    <label class="onoffswitch-label" for="noti_desktop">
+                        <div class="onoffswitch-inner"></div>
+                        <div class="onoffswitch-switch"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="span4 list" style="margin-top: 15px; display: none;" id="timeSet">
+            <h4>自动关闭时间(秒)</h4>
+            <p></p>
+            <input class="row-fluid" placeholder="默认5s后关闭" value="5" id="delay_time">
+        </div>
+
+        <button id="SaveBtn" style="margin-top: 20px;">保存</button>
     </section>
 </div>
 </body>

@@ -3072,13 +3072,13 @@ input [type="submit "].btn.btn-mini {
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "开启";
+    content: "是";
     padding: 1px 0px 0px 14px;
     background-color: #4B82C5;
     color: #fff;
 }
 .onoffswitch-inner:after {
-    content: "关闭";
+    content: "";
     padding: 1px 14px 0px 0px;
     background-color: #cfcece;
     color: #666;

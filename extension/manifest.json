@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "JIRA-TOAST",
   "description": "Jira issue 实时提醒.",
-  "version": "1.0",
+  "version": "1.2",
   "icons": {
     "48": "img/icon.png",
     "128": "img/icon.png"
@@ -20,5 +20,9 @@
     "notifications",
     "https://*/",
     "http://*/"
-  ]
+  ],
+
+  // HACK Error
+  // debug: parse error,Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: "script-src 'self' chrome-extension-resource:".
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
