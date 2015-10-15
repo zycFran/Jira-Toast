@@ -2,10 +2,9 @@
  * Created by zhouyc on 2015/10/10.
  */
 $(function(){
+    bindEvent();
 
     init();
-
-    bindEvent();
 
     var auto_close;
     var delay_time;
@@ -29,6 +28,8 @@ $(function(){
         }else{
             $("#timeSet").hide();
         }
+
+        $(".role-item.role-developer").click();
     }
 
     function bindEvent(){

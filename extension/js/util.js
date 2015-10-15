@@ -25,3 +25,4 @@ function postAjax(url, data, cb){
     };
     xhr.send(data);
 }
+

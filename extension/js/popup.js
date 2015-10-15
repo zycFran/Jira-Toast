@@ -12,11 +12,10 @@ var jiraListCtr = avalon.define({
 getList();
 
 function getList(){
-
     var assignee = localStorage.getItem("jira_userid");
     var role = localStorage.getItem("jira_role");
 
-    var jql = 'project=SMYH%20and%20resolution=Unresolved%20and%20assignee=' + assignee;
+    var jql = 'project=SMYH%20and%20resolution=Unresolved%20and%20assignee=' + assignee + "&_dt=" + Math.random();
     var url = 'http://42.121.137.49/jira/rest/api/2/search?jql=' + jql;
     var base = 'http://42.121.137.49/jira/browse/';
 
