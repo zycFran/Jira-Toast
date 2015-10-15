@@ -12,7 +12,7 @@ function showNotice(issue, state) {
         window.open(base + issue.key);
     };
 
-    var auto_close = localStorage.getItem("auto_close");
+    var auto_close = localStorage.getItem("auto_close")=='true';
     var delay_time = Number(localStorage.getItem("delay_time")) || 5;
     if(auto_close){
         setTimeout(function () {

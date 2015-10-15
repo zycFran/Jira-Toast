@@ -21,7 +21,7 @@ $(function(){
         delay_time = localStorage.getItem("delay_time") || 5;
         $("#delay_time").val(delay_time);
 
-        auto_close = localStorage.getItem("auto_close") || false;
+        auto_close = localStorage.getItem("auto_close")=='true';
         $("#noti_desktop").attr("checked", auto_close);
 
         if(auto_close){
